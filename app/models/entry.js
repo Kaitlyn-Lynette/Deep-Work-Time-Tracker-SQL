@@ -1,16 +1,16 @@
 // Dependencies
 // =============================================================
 
-// Sequelize (capital) references the standard library
+//References the standard library
 var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
+//Connection to the database
 var sequelize = require("../config/connection.js");
 
-//Create the "Entry" model 
-
-var Entry = sequelize.definte("entry", {
-    date: Sequelize.DATEONLY ,
-    time: Sequelize.INTEGER
+//Create the "Entry" model that matches with the DB
+var Entry = sequelize.define("entry", {
+    hour: Sequelize.INTEGER ,
+    description: Sequelize.STRING,
+    created_at: Sequelize.DATE
 });
 
 // Syncs with DB
