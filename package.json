@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Kaitlyn-Lynette/Deep-Work-Time-Tracker-SQL#readme",
   "dependencies": {
+    "bulma": "^0.9.3",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.4"
