@@ -4,19 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Added a link to Bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!-- Added a link to our external stylesheet-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -31,59 +19,51 @@
     href="https://fonts.googleapis.com/css2?family=Anton&display=swap" 
     rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Added a link to our external stylesheet with Bulma-->
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link 
+    rel="stylesheet" 
+    href="./css/style.css" 
+    />
 
     <title>Coding Work Time Tracker</title>
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Coding Deep Work Time Tracker</h1>
-      <p class="lead">A simple app for tracking the time I spend coding each day. </p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <div class="time-block" input type="text">
-        <div class="table-responsive">
-            <table class="table align-middle">
-              <thead>
-                <th scope="col">
-                  Time
-                </th>
-                <th scope="col">
-                    Description
-                  </th>
-              </thead>
-              <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>I seeded the database and leanred that to seed the databse it helps to generate the model from sequel.</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td scope="row"></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td scope="row"></td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td scope="row"></td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td scope="row"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-      </div>
-    </div>
+    <section class="section">
+    <div class="container is-fluid">
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <p class="title">
+                Coding Deep Work Time Tracker
+                </p>
+                <p class="subtitle">
+                A simple app for tracking my time and work every day. 
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <h1 class="title">
+            What did I work on?
+            </h1>
+                <button class="button is-success" id="entry-submit">Save!</button>
+        </section>
+        <section class="section is-medium">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-success">
+              <div class="content" id="entry-area">
+              </div>
+            </article>
+          </div>        
+        </section>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="./js/entry.js"></script>
   </body>
 </html>
