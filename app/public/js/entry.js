@@ -4,9 +4,9 @@ $.get("/api/all", function (data) {
 
         for(var i = 0; i<data.length; i++) {
             var row = $("<div>");
-            row.addClass("entry");
+            row.addClass("entry subtitle");
             row.append("<p>" + data[i].description + "</p>");
-
+//Appending the entries submitted here. I want to append entries submitted only with today's date. 
             $("#entry-area").prepend(row);
 
         }
