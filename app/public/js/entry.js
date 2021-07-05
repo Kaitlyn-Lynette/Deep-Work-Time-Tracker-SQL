@@ -1,4 +1,6 @@
-// const moment = require("moment");
+var dateDiv = $("#date");
+// dateDiv.append(moment().format("MMM Do YY"));
+dateDiv.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 $("#entry-submit").on("click", function(event){
     console.log("I was clicked!")

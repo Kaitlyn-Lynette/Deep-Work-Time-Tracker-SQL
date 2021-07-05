@@ -1,12 +1,28 @@
-.jumbotron {
-    text-align: center;
-    background-color: yellow;
-    color: black;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-    font-family:'Anton', sans-serif;
+.container {
+    font-family: 'Courier Prime', monospace;
   }
 
   .savebtn {
     margin-top: 20px;
   }
+
+#date {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ #logs p {
+   font-size: 14px;
+ }
+ 
+ #entry {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+
+ }
+
+ #logs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+ }

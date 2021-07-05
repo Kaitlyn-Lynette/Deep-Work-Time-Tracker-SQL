@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link 
-    href="https://fonts.googleapis.com/css2?family=Anton&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" 
     rel="stylesheet"
     />
     <!-- Added a link to our external stylesheet with Bulma-->
@@ -44,14 +44,15 @@
                 A simple app for tracking my time and work every day. 
                 </p>
             </div>
+            <div id="date"> </div>
         </section>
-        <section class="section">
+        <section class="section" id="entry">
             <input class="input is-warning is-large" id="entry-description" type="text" placeholder="What did you do today?">  
             <div  class="savebtn">
               <button class="button is-success" id="entry-submit">Save!</button>
             </div>
         </section>
-        <section class="section is-medium">
+        <section class="section is-medium" id="logs">
           <div class="tile is-parent">
             <article class="tile is-child notification is-success">
               <div class="content" id="entry-area">
@@ -60,6 +61,12 @@
           </div>        
         </section>
     </section>
+
+    <!-- <script type="text/javascript">
+    var dateDiv = $("#date");
+    // dateDiv.append(moment().format("MMM Do YY"));
+    dateDiv.text("date");
+    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
