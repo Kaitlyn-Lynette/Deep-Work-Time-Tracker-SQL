@@ -31,16 +31,17 @@ $("#entry-submit").on("click", function(event){
 $.get("/api/all", function (data) {
     if(data.length !==0) {
 
-        for(var i = 0; i<data.length; i++) {
-            console.log(data[i])
-            // var timestamp = data[i].createdAt
-            var row = $("<div>");
-            row.addClass("entry subtitle");
-            row.append("<p>" + data[i].description + "</p>");
+    for(var i = 0; i<data.length; i++) {
+        var timestamp = moment(data[i].createdAt).format("YYYY-MM-DD HH:mm");
+    console.log(moment(data[i].createdAt).format("YYYY-MM-DD HH:mm:ss"))
+    console.log(data[i].description)       
+  
+        var row = $("<div>");
+        row.addClass("entry subtitle");
+        row.append("<p>" + timestamp + " " + data[i].description + "</p>");
 //Appending the entries submitted here. I want to append entries submitted only with today's date. 
-            $("#entry-area").prepend(row);
-
+        $("#entry-area").prepend(row);
         }
-    }
+    };
 });
 
