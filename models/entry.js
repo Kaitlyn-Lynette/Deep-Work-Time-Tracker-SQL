@@ -14,9 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Entry.init({
-    hour: DataTypes.INTEGER,
-    description: DataTypes.STRING,
-    createdAt: DataTypes.DATE
+    description: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Entry',
