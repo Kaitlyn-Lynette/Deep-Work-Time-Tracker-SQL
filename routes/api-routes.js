@@ -10,18 +10,18 @@ module.exports = function(app) {
         });
     });
 
-    // app.post("/api/new", function(req,res) {
-    //     console.log("Entry data:")
-    //     console.log(req.body);
+    app.post("/api/new", function(req,res) {
+        console.log("Entry data:")
+        console.log(req.body);
 
-    //     var entry = req.body 
+        var entry = req.body 
        
-    //     db.Entry.create({
-    //         description: entry.description,
-    //         created_at: entry.created_at
-    //     }).then(function(results) {
-    //         res.json(dbEntry)
-    //     });
-    // });
+        db.Entry.create({
+            description: entry.description,
+            created_at: entry.created_at
+        }).then(function(dbEntry) {
+            res.json(dbEntry)
+        });
+    });
 
 };

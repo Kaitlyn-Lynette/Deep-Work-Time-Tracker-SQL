@@ -18,7 +18,7 @@ $("#entry-submit").on("click", function(event){
     // On success, run the following code
         .then(function() {
             var row = $("<div>");
-            
+
             row.addClass=("entry");
             row.append("<div>" + newEntry.description + "</div>");
             row.append("<div>" + moment(created_at).format("h:mma on dddd")+"<div>")
@@ -32,9 +32,12 @@ $.get("/api/all", function (data) {
     if(data.length !==0) {
 
     for(var i = 0; i<data.length; i++) {
+       
         var timestamp = moment(data[i].createdAt).format("YYYY-MM-DD HH:mm");
-    console.log(moment(data[i].createdAt).format("YYYY-MM-DD HH:mm:ss"))
-    console.log(data[i].description)       
+        // console.log(moment(data[i].createdAt).format("YYYY-MM-DD HH:mm:ss"))
+        // console.log(data[i].description)    
+        var createdAtTimeStamp = moment(data[i].createdAt).format("YYYY-MM-DD");
+        console.log(createdAtTimeStamp)
   
         var row = $("<div>");
         row.addClass("entry subtitle");
