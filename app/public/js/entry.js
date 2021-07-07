@@ -17,13 +17,11 @@ $("#entry-submit").on("click", function(event){
     $.post("api/new", newEntry)
     // On success, run the following code
         .then(function() {
-
             var row = $("<div>");
+            
             row.addClass=("entry");
-
             row.append("<div>" + newEntry.description + "</div>");
             row.append("<div>" + moment(created_at).format("h:mma on dddd")+"<div>")
-            
             $("#entry-area").prepend(row);
         })
 // Empty each input box by replacing the value with an empty string
