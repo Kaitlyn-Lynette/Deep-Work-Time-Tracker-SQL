@@ -1,6 +1,5 @@
 $(document).ready(function() {
     var postBoard = $(".post-container")
-    // var tileWrap = $(".tile is-ancestor")
     var posts;
 
 
@@ -30,8 +29,9 @@ $(document).ready(function() {
     }
 
     function createNewPostIt (post) {
-        var newPostIt=$("<article>");
-        newPostIt.addClass("tile is-child notification is-warning");
+
+        var newPostIt=$("<tile>");
+        newPostIt.addClass("tile is-4 is-child notification is-warning")
 
         var newBody = $("<p>");
         newBody.text(post.description);
