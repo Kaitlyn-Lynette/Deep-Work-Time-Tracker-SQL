@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var postBoard = $(".post-container")
+    // var tileWrap = $(".tile is-ancestor")
     var posts;
 
 
@@ -7,7 +8,7 @@ $(document).ready(function() {
         $.get("/api/all", function (data) {
             posts = data;
             if(!posts || !posts.length) {
-                postBoard.append("You have zero posts")
+                tileWrap.append("You have zero posts")
             }
             else {
                 initializePostIts();
@@ -25,23 +26,18 @@ $(document).ready(function() {
             postsToAdd.push(createNewPostIt(posts[i]));             
         }
         postBoard.append(postsToAdd) 
+       
     }
 
     function createNewPostIt (post) {
-        var newPostIt = $("<div>")
-        newPostIt.addClass("postit");
-
-        var newPostItBody=$("<div>");
-        newPostItBody.addClass("postit-body");
+        var newPostIt=$("<article>");
+        newPostIt.addClass("tile is-child notification is-warning");
 
         var newBody = $("<p>");
-        // console.log(post.body)
         newBody.text(post.description);
-        console.log(post.description)
-        // console.log(post.body)
-        newPostItBody.append(newBody)
-        // newPostItBody.append(newPostIt)
-        return newPostItBody;
+        newPostIt.append(newBody)
+
+        return newPostIt;
     }
         
     });
