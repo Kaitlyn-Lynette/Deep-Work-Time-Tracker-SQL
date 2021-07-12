@@ -33,8 +33,10 @@ $(document).ready(function() {
         var newPostIt=$("<tile>");
         newPostIt.addClass("tile notification is-warning post-it")
 
+        console.log(moment(post.createdAt).format("MMM Do YY"))
+        var date = moment(post.createdAt).format("MMM Do YY")
         var newBody = $("<p>");
-        newBody.text(post.description);
+        newBody.html(date +  "<br>" + post.description);
         newPostIt.append(newBody)
 
         return newPostIt;

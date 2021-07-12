@@ -33,18 +33,13 @@ $.get("/api/all", function (data) {
 
     for(var i = 0; i<data.length; i++) {
        
-        var timestamp = moment(data[i].createdAt).format("YYYY-MM-DD HH:mm");
-        // console.log(moment(data[i].createdAt).format("YYYY-MM-DD HH:mm:ss"))
-        // console.log(data[i].description)    
         var createdAtTimeStamp = moment(data[i].createdAt).format("YYYY-MM-DD");
-        console.log(createdAtTimeStamp)
 
-        console.log(moment().format('L'));
         if(createdAtTimeStamp === moment().format("YYYY-MM-DD")) {
             var row = $("<div>");
             row.addClass("entry subtitle");
-            row.append("<p>" + timestamp + " " + data[i].description + "</p>");
-    //Appending the entries submitted here. I want to append entries submitted only with today's date. 
+            row.append("<p>" + createdAtTimeStamp + " " + data[i].description + "</p>");
+//Appending the entries submitted here. I want to append entries submitted only with today's date. 
             $("#entry-area").prepend(row);
         }
 
