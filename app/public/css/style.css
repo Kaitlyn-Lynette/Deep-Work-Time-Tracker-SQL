@@ -39,4 +39,6 @@
 
  .tile {
     margin:20px;
+    max-width: fit-content;
+
  }

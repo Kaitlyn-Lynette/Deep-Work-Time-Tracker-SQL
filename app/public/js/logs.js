@@ -31,7 +31,7 @@ $(document).ready(function() {
     function createNewPostIt (post) {
 
         var newPostIt=$("<tile>");
-        newPostIt.addClass("tile is-4 is-child notification is-warning")
+        newPostIt.addClass("tile notification is-warning")
 
         var newBody = $("<p>");
         newBody.text(post.description);
