@@ -1,3 +1,5 @@
+// const { DATE } = require("sequelize/types");
+
 $(document).ready(function() {
     var postBoard = $(".post-container")
     var posts;
@@ -20,6 +22,7 @@ $(document).ready(function() {
     function initializePostIts () {
         postBoard.empty();
         var postsToAdd = [];
+     
         for(var i=0; i<posts.length; i++) {
             console.log(posts[i])
             postsToAdd.push(createNewPostIt(posts[i]));             
@@ -32,13 +35,13 @@ $(document).ready(function() {
 
         var newPostIt=$("<tile>");
         newPostIt.addClass("tile notification is-warning post-it")
-
-        console.log(moment(post.createdAt).format("MMM Do YY"))
-        var date = moment(post.createdAt).format("MMM Do YY")
-        var newBody = $("<p>");
-        newBody.html(date +  "<br>" + post.description);
-        newPostIt.append(newBody)
-
+        var date = moment(post.createdAt).format("MMM Do YY, h:mm:ss a")
+        console.log(date);
+        
+            var newBody = $("<p>");
+            newBody.html(date +  "<br>" + post.description);
+            newPostIt.append(newBody)
+        
         return newPostIt;
     }
         
