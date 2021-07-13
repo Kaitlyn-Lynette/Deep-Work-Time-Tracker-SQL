@@ -9,9 +9,8 @@ The idea for this project came from my own pencil and paper recordings of my cod
 
 # How it was built
 
-Back-End: 
+Back-End: Used Sequelize to setup the SQL database
 
-Sequelize: Used the following commands to setup a database 
 npx sequelize-cli init
 npx sequelize-cli db:create
 Used model:generate to generate my own model
