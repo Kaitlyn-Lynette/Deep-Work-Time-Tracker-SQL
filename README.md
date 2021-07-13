@@ -11,12 +11,12 @@ The idea for this project came from my own pencil and paper recordings of my cod
 
 Back-End: Used Sequelize to setup the SQL database
 
-*npx sequelize-cli init
-*npx sequelize-cli db:create
-*Used model:generate to generate my own model
-*npx sequelize-cli db:migrate to migrate the model to the database
-*npx sequelize-cli seed:generate --name to seed the database
-*npx sequelize-cli db:seed:all
+* npx sequelize-cli init
+* npx sequelize-cli db:create
+* Used model:generate to generate my own model
+* npx sequelize-cli db:migrate to migrate the model to the database
+* npx sequelize-cli seed:generate --name to seed the database
+* npx sequelize-cli db:seed:all
 
 
 Front-End: 
